@@ -1,0 +1,189 @@
+/*---------------------------------------------------------------------------
+VARIABLES
+---------------------------------------------------------------------------*/
+$page-background-color:#ecf0f1;
+$active-background-color:#f7f7f7;
+$grey-color:#555;
+$red-color: #EB4D4D;
+$font:'Work Sans',sans-serif;
+/*---------------------------------------------------------------------------
+BASE
+---------------------------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    background-color: $page-background-color;
+}
+
+body {
+    font-family: $font;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 1.8;
+    overflow-y: scroll;
+    position: relative;
+    height: 100vh;
+    color: $grey-color;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    width: 95rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 1rem 3rem rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+/*---------------------------------------------------------------------------
+PLAYERS
+---------------------------------------------------------------------------*/
+
+.player {
+    &-0-panel,
+    &-1-panel {
+        width: 50%;
+        float: left;
+        height: 60rem;
+        padding: 10rem;
+    }
+    &-name {
+        font-size: 4rem;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 300;
+        margin-top: 3.5rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    &-score {
+        text-align: center;
+        font-size: 8rem;
+        font-weight: 100;
+        color: $red-color;
+        margin-bottom: 13rem;
+    }
+    &-current-box {
+        background-color: $red-color;
+        color: #fff;
+        width: 45%;
+        margin: -8rem auto;
+        padding: 1.2rem;
+        text-align: center;
+    }
+    &-current-label {
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+        letter-spacing: 1px;
+        color: #fff;
+    }
+    &-current-score {
+        font-size: 3rem;
+    }
+}
+
+/*---------------------------------------------------------------------------
+BUTTONS
+---------------------------------------------------------------------------*/
+
+button {
+    position: absolute;
+    width: 20rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: $grey-color;
+    background: none;
+    border: none;
+    font-family: $font;
+    font-size: 2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 400;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover i {
+        margin-right: 1.5rem;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    &-help {
+        top: 3.5rem;
+        left: 83.5rem;
+    }
+    &-new {
+        top: 3.5rem;
+        left: 11.5rem;
+    }
+    &-roll {
+        top: 40.3rem;
+    }
+    &-hold {
+        top: 46.7rem;
+    }
+}
+
+i {
+    color: $red-color;
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 2.2rem;
+    line-height: 1;
+    vertical-align: middle;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+/*---------------------------------------------------------------------------
+DICE
+---------------------------------------------------------------------------*/
+
+.dice {
+    position: absolute;
+    left: 50%;
+    top: 17.8rem;
+    transform: translateX(-50%);
+    height: 10rem;
+    box-shadow: 0px 1rem 6rem rgba(0, 0, 0, 0.10);
+}
+
+/*---------------------------------------------------------------------------
+WINNER & ACTIVE PLAYERS
+---------------------------------------------------------------------------*/
+
+.active {
+    background-color: $active-background-color;
+    .player-name::after {
+        content: "\2022";
+        font-size: 5rem;
+        position: absolute;
+        color: $red-color;
+        top: -9px;
+        right: 5px;
+    }
+}
+
+.winner {
+    background-color: $active-background-color;
+    .player-name {
+        color: $red-color;
+    }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--META TAGS-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS-->
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100,300,400,600" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="styles.css">
+
+    <!-- TITLE -->
+    <title>Dice Game</title>
+
+</head>
+
+<body>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <div class="wrapper clearfix">
+
+        <!-- PLAYER 1 PANEL -->
+        <div class="player-0-panel active">
+            <div class="player-name" id="name-0">Player 1</div>
+            <div class="player-score" id="score-0">43</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-0">11</div>
+            </div>
+        </div>
+
+        <!-- PLAYER 2 PANEL -->
+        <div class="player-1-panel">
+            <div class="player-name" id="name-1">Player 2</div>
+            <div class="player-score" id="score-1">72</div>
+            <div class="player-current-box">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+
+        <!-- GAME BUTTONS & ICONS -->
+        <button class="btn-help">
+            <i class="ion-help-circled"></i>How to play</button>
+        <button class="btn-new">
+            <i class="ion-android-add-circle"></i>New game</button>
+        <button class="btn-roll">
+            <i class="ion-loop"></i>Roll dice</button>
+        <button class="btn-hold">
+            <i class="ion-android-arrow-dropdown-circle"></i>Hold</button>
+
+        <!-- DICE IMAGE -->
+        <img src="dice-5.png" alt="Dice" class="dice">
+
+    </div>
+
+    <!-- JAVASCRIPT LINK -->
+    <script src="scripts.js"></script>
+
+</body>
+
+</html>
