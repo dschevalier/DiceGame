@@ -30,6 +30,8 @@ body {
     position: relative;
     height: 100vh;
     color: $grey-color;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .clearfix::after {
