@@ -5,7 +5,8 @@ $page-background-color:#ecf0f1;
 $active-background-color:#f7f7f7;
 $grey-color:#555;
 $red-color: #EB4D4D;
-$font:'Work Sans',sans-serif;
+$font:'Work Sans',
+sans-serif;
 /*---------------------------------------------------------------------------
 BASE
 ---------------------------------------------------------------------------*/
@@ -31,7 +32,7 @@ body {
     height: 100vh;
     color: $grey-color;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .clearfix::after {
@@ -56,6 +57,7 @@ PLAYERS
 ---------------------------------------------------------------------------*/
 
 .player {
+
     &-0-panel,
     &-1-panel {
         width: 50%;
@@ -63,6 +65,7 @@ PLAYERS
         height: 60rem;
         padding: 10rem;
     }
+
     &-name {
         font-size: 4rem;
         text-align: center;
@@ -73,6 +76,7 @@ PLAYERS
         margin-bottom: 1rem;
         position: relative;
     }
+
     &-score {
         text-align: center;
         font-size: 8rem;
@@ -80,6 +84,7 @@ PLAYERS
         color: $red-color;
         margin-bottom: 13rem;
     }
+
     &-current-box {
         background-color: $red-color;
         color: #fff;
@@ -88,6 +93,7 @@ PLAYERS
         padding: 1.2rem;
         text-align: center;
     }
+
     &-current-label {
         text-transform: uppercase;
         margin-bottom: 1rem;
@@ -95,6 +101,7 @@ PLAYERS
         letter-spacing: 1px;
         color: #fff;
     }
+
     &-current-score {
         font-size: 3rem;
     }
@@ -118,9 +125,11 @@ button {
     cursor: pointer;
     font-weight: 400;
     transition: background-color 0.3s, color 0.3s;
+
     &:hover i {
         margin-right: 1.5rem;
     }
+
     &:focus {
         outline: none;
     }
@@ -131,13 +140,16 @@ button {
         top: 3.5rem;
         left: 83.5rem;
     }
+
     &-new {
         top: 3.5rem;
         left: 11.5rem;
     }
+
     &-roll {
         top: 40.3rem;
     }
+
     &-hold {
         top: 46.7rem;
     }
@@ -173,6 +185,7 @@ WINNER & ACTIVE PLAYERS
 
 .active {
     background-color: $active-background-color;
+
     .player-name::after {
         content: "\2022";
         font-size: 5rem;
@@ -185,6 +198,7 @@ WINNER & ACTIVE PLAYERS
 
 .winner {
     background-color: $active-background-color;
+
     .player-name {
         color: $red-color;
     }

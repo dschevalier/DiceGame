@@ -21,7 +21,9 @@ body {
   overflow-y: scroll;
   position: relative;
   height: 100vh;
-  color: #555; }
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .clearfix::after {
   content: "";
