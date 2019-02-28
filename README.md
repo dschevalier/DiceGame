@@ -1,8 +1,8 @@
 ## DiceGame
 
-A simple and fun dice game built from a instructional javaScript course.
-
 [dicegame.dchevalier.io](https://dicegame.dchevalier.io)
+
+A simple and fun dice game built from a instructional javaScript course.
 
 ## Rules of the game
 
